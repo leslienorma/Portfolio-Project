@@ -53,13 +53,6 @@ ORDER BY TotalDeathCount DESC
 
 -- LET'S BREAK THINGS DOWN BY CONTINENT
 
--- CORRECT WAY BELOW:
---SELECT location, MAX(cast(Total_deaths AS int)) AS TotalDeathCount
---FROM PortfolioProject.dbo.CovidDeaths
-----WHERE location LIKE '%states%'
---WHERE continent IS NULL
---GROUP BY location
---ORDER BY TotalDeathCount DESC
 
 SELECT continent, MAX(cast(Total_deaths AS int)) AS TotalDeathCount
 FROM PortfolioProject.dbo.CovidDeaths
